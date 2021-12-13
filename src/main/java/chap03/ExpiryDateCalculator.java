@@ -27,10 +27,7 @@ public class ExpiryDateCalculator {
     }
 
     private boolean isSameDayOfMonth(LocalDate localDate1, LocalDate localDate2) {
-        if(localDate1.getDayOfMonth()==localDate2.getDayOfMonth()) {
-            return true;
-        }
-        return false;
+        return localDate1.getDayOfMonth()==localDate2.getDayOfMonth() ? true: false;
     }
 
     private int lastDayOfMonth(LocalDate localDate) {

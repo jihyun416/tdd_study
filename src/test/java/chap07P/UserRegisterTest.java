@@ -25,7 +25,7 @@ public class UserRegisterTest {
     @DisplayName("약한 암호면 가입 실패")
     @Test
     void weakPassword() {
-        given(mockWeakPasswordChecker.checkPasswordWeak("pw")).willReturn(true); // 암호가 약하다고 응답하도록 설정
+        given(mockWeakPasswordChecker.checkPasswordWeak(anyString())).willReturn(true); // 암호가 약하다고 응답하도록 설정
         assertThrows(WeakPasswordException.class, () -> userRegister.register("id", "pw", "email"));
     }
 

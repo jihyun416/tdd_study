@@ -2,6 +2,7 @@ package chap05;
 
 import org.junit.jupiter.api.Test;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class SumTest {
@@ -14,6 +15,7 @@ public class SumTest {
         String a = "a";
         String a1 = a;
         String b = "b";
+        assertThat(a).contains("a");
         assertSame(a, a1);
         assertNotSame(a, b);
         assertTrue(true);
